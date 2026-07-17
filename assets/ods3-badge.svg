@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="80" height="80">
+  <!-- ODS 3 Official Badge - Faithful SVG Recreation -->
+  <!-- Background: Official UN SDG Green -->
+  <rect x="0" y="0" width="200" height="200" fill="#3DAA38" rx="6"/>
+
+  <!-- Large "3" top-left -->
+  <text x="14" y="105" font-family="'Arial Black', 'Arial', sans-serif" font-weight="900" font-size="110" fill="#FFFFFF">3</text>
+
+  <!-- "SALUD" top-right -->
+  <text x="98" y="48" font-family="'Arial Black', 'Arial', sans-serif" font-weight="900" font-size="32" fill="#FFFFFF" letter-spacing="-0.5">SALUD</text>
+  <!-- "Y BIENESTAR" below -->
+  <text x="98" y="82" font-family="'Arial Black', 'Arial', sans-serif" font-weight="900" font-size="24" fill="#FFFFFF" letter-spacing="-0.5">Y BIENESTAR</text>
+
+  <!-- ECG / Heartbeat Line with Heart -->
+  <!-- Line starts from left-center -->
+  <g transform="translate(15, 125)">
+    <!-- Flat ECG line + spike + heart -->
+    <polyline
+      points="0,38  28,38  38,38  44,8  54,58  64,22  74,38  94,38"
+      fill="none"
+      stroke="#FFFFFF"
+      stroke-width="8"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <!-- Line continuing right to heart -->
+    <line x1="94" y1="38" x2="110" y2="38" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round"/>
+    <!-- Heart shape at the end -->
+    <g transform="translate(108, 18)">
+      <path d="M 22 8 C 22 3, 16 0, 12 4 C 8 0, 2 3, 2 8 C 2 15, 12 22, 12 22 C 12 22, 22 15, 22 8 Z" fill="#FFFFFF"/>
+    </g>
+  </g>
+</svg>

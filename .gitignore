@@ -1,0 +1,40 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.env/
+ENV/
+
+# Editor files
+*.swp
+*.swo
+*.idea/
+.vscode/
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+
+# Build directories
+build/
+dist/
+.eggs/
+*.egg-info/
+
+# Packaging
+*.egg
+*.whl
+
+# Temporary files
+*.tmp
+*.bak
+*~

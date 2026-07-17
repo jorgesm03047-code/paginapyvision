@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>PyVision: Corrección de Postura Inteligente</title>
+  <meta name="description" content="Tu asistente personal de ergonomía basado en Visión por Computadora. Sistema no invasivo para combatir riesgos ergonómicos." />
+  <meta name="keywords" content="PyVision, postura, visión artificial, MediaPipe, PySide6, Python, ergonomía, ODS 3" />
+  <meta name="author" content="Equipo PyVision BUAP" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="PyVision: Corrección de Postura Inteligente" />
+  <meta property="og:description" content="Tu asistente personal de ergonomía basado en Visión por Computadora. Python, MediaPipe, PySide6, ODS 3." />
+  <meta property="og:type" content="website" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/logo-pyvision.svg" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ================================================================
+       HEADER / NAVBAR
+       ================================================================ -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-container">
+
+      <a href="index.html" class="brand-logo" aria-label="PyVision Solutions - Inicio">
+        <img src="assets/logo-pyvision.svg" alt="PyVision Logo" class="logo-light" style="height: 38px; width: auto; object-fit: contain;" />
+        <img src="assets/logo-pyvision-white.svg" alt="PyVision Logo" class="logo-dark" style="height: 38px; width: auto; object-fit: contain;" />
+      </a>
+
+      <nav aria-label="Navegación principal">
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#features" class="nav-link">Características</a></li>
+          <li><a href="#problem" class="nav-link">Problemática</a></li>
+          <li><a href="#ods" class="nav-link">ODS 3</a></li>
+          <li><a href="download.html" class="nav-link">Descargar</a></li>
+          <li>
+            <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema claro/oscuro">
+              <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+              <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            </button>
+          </li>
+          <li>
+            <a href="download.html" class="btn-pill-primary" id="navCta">
+              Obtener PyVision
+              <span class="btn-arrow">→</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Abrir menú" style="display:none;">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ================================================================
+         SECTION 1: HERO SECTION
+         ================================================================ -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+
+        <!-- Left Column -->
+        <div class="hero-left">
+          
+          <div class="tech-badges-row hero-stagger hero-stagger-1">
+            <span class="tech-badge">Python</span>
+            <span class="tech-badge">MediaPipe</span>
+            <span class="tech-badge">PySide6</span>
+            <span class="tech-badge">ODS 3</span>
+          </div>
+
+          <h1 class="hero-title hero-stagger hero-stagger-2">
+            PyVision: <span class="gradient-text">Corrección de Postura</span> Inteligente
+          </h1>
+
+          <h2 class="hero-subtitle hero-stagger hero-stagger-2" style="font-size: 1.3rem; margin-bottom: 20px; font-weight: 600; color: var(--text-main);">
+            Tu asistente personal de ergonomía basado en Visión por Computadora. 🚀
+          </h2>
+
+          <p class="hero-description hero-stagger hero-stagger-3">
+            PyVision es un sistema de software no invasivo diseñado para combatir los riesgos ergonómicos derivados de las largas jornadas frente al ordenador (habitualmente entre 8 y 10 horas diarias). Mediante el uso de una cámara web estándar y técnicas avanzadas de visión por computadora, PyVision analiza la alineación corporal del usuario en tiempo real.
+          </p>
+          <p class="hero-description hero-stagger hero-stagger-3">
+            A diferencia de los costosos muebles ergonómicos o los incómodos correctores físicos, PyVision evalúa la postura de manera discreta y, al detectar anomalías sostenidas (como el encorvamiento o el "cuello de texto"), emite notificaciones inteligentes que no interrumpen el flujo de trabajo. El objetivo principal es reentrenar la memoria muscular y fomentar hábitos saludables a largo plazo.
+          </p>
+
+          <div class="hero-actions hero-stagger hero-stagger-4">
+            <a href="download.html" class="btn-pill-primary">
+              Descargar Ahora
+              <span class="btn-arrow">→</span>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Right Column (Mockup) -->
+        <div class="hero-right mockup-fade">
+          <div class="mockup-wrapper">
+            <div class="mockup-window">
+              <div class="window-bar">
+                <div class="window-dots">
+                  <span class="dot dot-red"></span>
+                  <span class="dot dot-yellow"></span>
+                  <span class="dot dot-green"></span>
+                </div>
+                <span class="window-title">Dashboard - Interfaz PySide6</span>
+                <div class="window-status">
+                  <span class="status-indicator"></span>
+                  <span id="postureStatus">✓ Postura Optimizada</span>
+                </div>
+              </div>
+
+              <div class="window-content">
+                <div class="telemetry-overlay">
+                  <div class="telemetry-card">
+                    <div class="telemetry-label">Sesión</div>
+                    <div class="telemetry-value">Pomodoro (25m)</div>
+                  </div>
+                  <div class="telemetry-card">
+                    <div class="telemetry-label">Objetivo</div>
+                    <div class="telemetry-value">En Progreso</div>
+                  </div>
+                </div>
+
+                <canvas id="poseCanvas" class="pose-mesh-canvas"></canvas>
+
+                <div class="mockup-controls">
+                  <button class="control-btn active" data-mode="posture">Monitoreo</button>
+                  <button class="control-btn" data-mode="mesh">MediaPipe</button>
+                  <button class="control-btn" data-mode="alert">Simular Alerta</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================================
+         SECTION: INTERFAZ DE USUARIO (PREVIEW)
+         ================================================================ -->
+    <section class="ui-preview-section" id="interface">
+      <div class="container reveal-slide">
+        <div class="section-header" style="text-align: left; max-width: 100%;">
+          <span class="section-tag">Interfaz de Usuario (Preview)</span>
+          <h2 class="section-title" style="margin-bottom: 24px;">Un moderno dashboard oscuro diseñado en PySide</h2>
+          <p style="color: var(--text-muted); font-size: 1.1rem; max-width: 800px;">El sistema integra todas las herramientas necesarias para equilibrar salud y productividad en un solo lugar.</p>
+        </div>
+
+        <div class="ui-features-grid">
+          <div class="ui-feature-box">
+            <h4>⏱️ Sesión de Enfoque</h4>
+            <p>Gestión del tiempo inspirada en la técnica Pomodoro con intervalos de trabajo configurables.</p>
+          </div>
+          <div class="ui-feature-box">
+            <h4>📷 Monitoreo en Tiempo Real</h4>
+            <p>Visualización de la malla de puntos clave (MediaPipe) sobre el feed de la cámara.</p>
+          </div>
+          <div class="ui-feature-box">
+            <h4>🎯 Gestión de Objetivos</h4>
+            <p>Metas personalizadas a corto plazo con temporizadores y métricas de cumplimiento.</p>
+          </div>
+          <div class="ui-feature-box">
+            <h4>⚙️ Preferencias</h4>
+            <p>Control de alertas sonoras, notificaciones en pantalla y calibración de sensibilidad de postura.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         SECTION: CARACTERÍSTICAS PRINCIPALES
+         ================================================================ -->
+    <section class="grid-section" id="features">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Tecnología</span>
+          <h2 class="section-title">Características Principales</h2>
+        </div>
+
+        <div class="tech-grid">
+          <article class="tech-card reveal-card">
+            <h3 class="card-title">Detección No Invasiva</h3>
+            <p class="card-description">
+              Cero sensores corporales. Solo requiere una cámara web estándar (integrada o externa).
+            </p>
+          </article>
+
+          <article class="tech-card reveal-card">
+            <h3 class="card-title">Alertas Inteligentes</h3>
+            <p class="card-description">
+              Notificaciones diseñadas para avisar únicamente cuando la mala postura es sostenida, evitando falsos positivos por movimientos naturales.
+            </p>
+          </article>
+
+          <article class="tech-card reveal-card">
+            <h3 class="card-title">Pausas Activas y Ergonómicas</h3>
+            <p class="card-description">
+              Al terminar los bloques de enfoque, el software sugiere ejercicios correctivos y consejos posturales personalizados.
+            </p>
+          </article>
+
+          <article class="tech-card reveal-card" style="grid-column: span 3; text-align: center; padding: 30px;">
+            <h3 class="card-title">Dashboard de Progreso</h3>
+            <p class="card-description" style="max-width: 600px; margin: 0 auto;">
+              Analíticas e historial de postura para observar la evolución y mejora de los hábitos a lo largo del tiempo.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         SECTION: PROBLEMÁTICA Y JUSTIFICACIÓN
+         ================================================================ -->
+    <section class="impact-banner-section" id="problem" style="background: var(--bg-card); padding: 80px 0;">
+      <div class="container banner-content reveal-slide" style="grid-template-columns: 1fr;">
+        <div class="banner-text" style="max-width: 900px; margin: 0 auto; text-align: center;">
+          <h2 class="banner-heading">Problemática y Justificación Ergonómica</h2>
+          <p class="banner-subtext" style="margin-bottom: 40px;">
+            En México, entre el <strong>25% y el 30%</strong> de la población ocupada trabaja frente a una computadora, mientras que <strong>más del 85%</strong> de los estudiantes universitarios la utilizan entre 4 y 5 horas diarias sin hábitos posturales adecuados.
+          </p>
+          
+          <div style="text-align: left; background: var(--bg-subtle); padding: 32px; border-radius: var(--radius-lg); border: var(--border-subtle);">
+            <h3 style="margin-bottom: 16px; color: var(--text-main);">Distribución de la Tensión Física Diaria</h3>
+            <p style="color: var(--text-muted); margin-bottom: 24px;">Estudios demuestran que los factores de riesgo ergonómico se distribuyen drásticamente:</p>
+            
+            <div style="display: flex; flex-direction: column; gap: 16px;">
+              <div class="progress-bar-wrap">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+                  <strong style="color: var(--text-main);">Postura</strong>
+                  <span style="color: var(--accent-purple); font-weight: bold;">50%</span>
+                </div>
+                <div style="width: 100%; background: rgba(123, 44, 191, 0.2); height: 12px; border-radius: 6px;">
+                  <div style="width: 50%; background: var(--accent-purple); height: 100%; border-radius: 6px;"></div>
+                </div>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">Del impacto total de riesgo.</p>
+              </div>
+
+              <div class="progress-bar-wrap">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+                  <strong style="color: var(--text-main);">Duración</strong>
+                  <span style="color: var(--accent-blue); font-weight: bold;">33%</span>
+                </div>
+                <div style="width: 100%; background: rgba(59, 130, 246, 0.2); height: 12px; border-radius: 6px;">
+                  <div style="width: 33%; background: var(--accent-blue); height: 100%; border-radius: 6px;"></div>
+                </div>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">Debido al tiempo prolongado de exposición.</p>
+              </div>
+
+              <div class="progress-bar-wrap">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+                  <strong style="color: var(--text-main);">Fuerza / Frecuencia</strong>
+                  <span style="color: #F59E0B; font-weight: bold;">17%</span>
+                </div>
+                <div style="width: 100%; background: rgba(245, 158, 11, 0.2); height: 12px; border-radius: 6px;">
+                  <div style="width: 17%; background: #F59E0B; height: 100%; border-radius: 6px;"></div>
+                </div>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">Restante.</p>
+              </div>
+            </div>
+
+            <p style="color: var(--text-main); font-weight: 600; margin-top: 24px; line-height: 1.6;">
+              Esta acumulación de estrés físico no solo genera dolor crónico en cuello y columna, sino que reduce la concentración, eleva el estrés y disminuye directamente el rendimiento cognitivo y la productividad.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         SECTION: ODS 3
+         ================================================================ -->
+    <section class="ods-section" id="ods" style="padding: 80px 0; background: var(--bg-subtle);">
+      <div class="container reveal-slide">
+        <div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start;">
+          <div style="flex: 1; min-width: 300px;">
+            <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 24px;">
+              <img src="assets/ods3-badge.svg" alt="ODS 3" style="width: 120px; height: 120px; object-fit: contain; border-radius: 12px; box-shadow: var(--shadow-sm);" />
+              <div>
+                <h2 style="font-size: 2rem; font-weight: 800; color: var(--text-main);">Alineación ODS</h2>
+                <h3 style="font-size: 1.2rem; color: #16A34A; font-weight: 700;">Objetivo 3: Salud y Bienestar</h3>
+              </div>
+            </div>
+            <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.7;">
+              PyVision está directamente vinculado con el ODS 3 de la ONU, atacando problemáticas de salud física y mental en entornos académicos y profesionales.
+            </p>
+          </div>
+
+          <div style="flex: 2; min-width: 340px;">
+            <table class="ods-table">
+              <thead>
+                <tr>
+                  <th>Meta ONU</th>
+                  <th>Descripción ODS</th>
+                  <th>Vínculo Directo con PyVision</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="font-weight: bold; color: var(--text-main); font-size: 1.2rem;">3.4</td>
+                  <td>Reducir la mortalidad prematura y promover la salud mental y el bienestar.</td>
+                  <td>Combate el estrés académico, la fatiga y la ansiedad mediante recordatorios de descanso activo y pausas de estiramiento.</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: bold; color: var(--text-main); font-size: 1.2rem;">3.d</td>
+                  <td>Reforzar la alerta temprana y la reducción de riesgos para la salud a nivel global.</td>
+                  <td>Actúa como un monitor preventivo que detecta posturas de riesgo físico en tiempo real antes de que se conviertan en lesiones crónicas o microlesiones de columna.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================================================================
+       FOOTER INSTITUCIONAL
+       ================================================================ -->
+  <footer class="site-footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand-section">
+          <img src="assets/logo-pyvision-white.svg" alt="PyVision Solutions" class="footer-logo" style="height: 38px; width: auto; object-fit: contain; margin-bottom: 16px;" />
+          <p class="footer-tagline">
+            Tu asistente personal de ergonomía basado en Visión por Computadora.
+          </p>
+          <div class="footer-institutions">
+            <div class="footer-inst-item">
+              <img src="assets/buap-logo-white.png" alt="BUAP" class="footer-inst-logo" style="height: 48px; width: auto; object-fit: contain;" />
+              <span class="footer-inst-text" style="font-size: 0.85rem; font-weight: 700; letter-spacing: 0.5px;">Facultad de Ciencias<br/>de la Computación</span>
+            </div>
+            <img src="assets/ods3-badge.svg" alt="ODS 3 - Salud y Bienestar" class="footer-inst-logo" style="height: 44px; width: auto; object-fit: contain;" />
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Desarrolladores (BUAP)</div>
+          <ul class="footer-links">
+            <li class="footer-link" style="cursor: default; pointer-events: none;">Diego Barbosa R.</li>
+            <li class="footer-link" style="cursor: default; pointer-events: none;">Eustaquio Arriaga D. A.</li>
+            <li class="footer-link" style="cursor: default; pointer-events: none;">Santos Márquez J.D.</li>
+            <li class="footer-link" style="cursor: default; pointer-events: none;">Torres González M.</li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Enlaces</div>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Inicio</a></li>
+            <li><a href="download.html" class="footer-link">Descargas y Requisitos</a></li>
+            <li><a href="https://github.com" class="footer-link">Código Fuente (Git)</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">Facultad de Ciencias de la Computación, BUAP — Mayo 2026. Licenciatura en Ingeniería en Ciencias de la Computación.</p>
+        <div class="footer-social">
+          <a href="#" class="footer-social-link" aria-label="GitHub"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
