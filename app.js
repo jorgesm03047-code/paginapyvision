@@ -290,10 +290,10 @@ function initMockupTelemetry() {
 
   // Control Mode Toggle Handler
   controlBtns.forEach((btn) => {
-    btn.addEventListener('click', (e) => {
+    btn.addEventListener('click', () => {
       controlBtns.forEach((b) => b.classList.remove('active'));
-      e.target.classList.add('active');
-      mode = e.target.dataset.mode;
+      btn.classList.add('active');
+      mode = btn.dataset.mode;
 
       if (postureStatusElement) {
         if (mode === 'alert') {
