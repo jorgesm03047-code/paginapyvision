@@ -2,25 +2,26 @@
 
 /* dowlnoad page */
 :root {
-  --dl-win-accent:    #0078D4;
-  --dl-win-glow:      rgba(0, 120, 212, 0.18);
-  --dl-mac-accent:    #555555;
-  --dl-mac-glow:      rgba(85, 85, 85, 0.18);
-  --dl-green:         #16A34A;
-  --dl-green-bg:      rgba(22, 163, 74, 0.1);
+  --dl-win-accent: #0078D4;
+  --dl-win-glow: rgba(0, 120, 212, 0.18);
+  --dl-mac-accent: #555555;
+  --dl-mac-glow: rgba(85, 85, 85, 0.18);
+  --dl-green: #16A34A;
+  --dl-green-bg: rgba(22, 163, 74, 0.1);
   --dl-changelog-line: #E2E8F0;
 }
 
 [data-theme="dark"] {
-  --dl-win-glow:      rgba(0, 120, 212, 0.12);
-  --dl-mac-glow:      rgba(180, 180, 180, 0.10);
+  --dl-win-glow: rgba(0, 120, 212, 0.12);
+  --dl-mac-glow: rgba(180, 180, 180, 0.10);
   --dl-changelog-line: #1E293B;
-  --dl-green-bg:      rgba(22, 163, 74, 0.08);
+  --dl-green-bg: rgba(22, 163, 74, 0.08);
 }
 
 /* page layout */
 .dl-main {
-  padding-top: 80px; /* offset fxied */
+  padding-top: 80px;
+  /* offset fxied */
 }
 
 /* hero bnaner */
@@ -685,10 +686,29 @@
   letter-spacing: 0.5px;
 }
 
-.dl-tag-stable  { background: rgba(22, 163, 74, 0.12); color: var(--dl-green); border: 1px solid rgba(22, 163, 74, 0.25); }
-.dl-tag-patch   { background: rgba(100, 116, 139, 0.12); color: var(--text-muted); border: 1px solid var(--border-color); }
-.dl-tag-feature { background: rgba(123, 44, 191, 0.1); color: var(--accent-purple); border: 1px solid rgba(123, 44, 191, 0.2); }
-.dl-tag-release { background: rgba(59, 130, 246, 0.1); color: var(--accent-blue); border: 1px solid rgba(59, 130, 246, 0.25); }
+.dl-tag-stable {
+  background: rgba(22, 163, 74, 0.12);
+  color: var(--dl-green);
+  border: 1px solid rgba(22, 163, 74, 0.25);
+}
+
+.dl-tag-patch {
+  background: rgba(100, 116, 139, 0.12);
+  color: var(--text-muted);
+  border: 1px solid var(--border-color);
+}
+
+.dl-tag-feature {
+  background: rgba(123, 44, 191, 0.1);
+  color: var(--accent-purple);
+  border: 1px solid rgba(123, 44, 191, 0.2);
+}
+
+.dl-tag-release {
+  background: rgba(59, 130, 246, 0.1);
+  color: var(--accent-blue);
+  border: 1px solid rgba(59, 130, 246, 0.25);
+}
 
 .dl-clog-date {
   font-size: 0.875rem;
@@ -726,9 +746,17 @@
   flex-shrink: 0;
 }
 
-.dl-clog-added::before    { background: var(--dl-green); }
-.dl-clog-improved::before { background: var(--accent-blue); }
-.dl-clog-fixed::before    { background: #F59E0B; }
+.dl-clog-added::before {
+  background: var(--dl-green);
+}
+
+.dl-clog-improved::before {
+  background: var(--accent-blue);
+}
+
+.dl-clog-fixed::before {
+  background: #F59E0B;
+}
 
 /* security section */
 .dl-security-section {
@@ -847,24 +875,150 @@
     max-width: 640px;
     margin: 0 auto 20px;
   }
+
   .dl-requirements-grid {
     grid-template-columns: 1fr;
   }
+
   .dl-req-visual {
     position: static;
   }
+
   .dl-hash-table-row {
     grid-template-columns: 1fr auto;
   }
+
   .dl-ht-file {
     display: none;
   }
 }
 
 @media (max-width: 768px) {
-  .dl-hero-title { font-size: 2.2rem; }
-  .dl-hero { padding: 56px 0 40px; }
-  .dl-installer-item { flex-direction: column; align-items: flex-start; gap: 10px; }
-  .dl-security-inner { flex-direction: column; }
-  .dl-clog-header { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .dl-hero-title {
+    font-size: 2.2rem;
+  }
+
+  .dl-hero {
+    padding: 56px 0 40px;
+  }
+
+  .dl-hero-sub {
+    font-size: 1rem;
+  }
+
+  .dl-installer-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .btn-dl {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .dl-security-inner {
+    flex-direction: column;
+  }
+
+  .dl-security-section {
+    padding: 40px 0;
+  }
+
+  .dl-clog-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .dl-cards-section {
+    padding: 40px 0 32px;
+  }
+
+  .dl-requirements-section {
+    padding: 56px 0;
+  }
+
+  .dl-card {
+    padding: 28px 22px;
+    gap: 22px;
+  }
+
+  .dl-req-title {
+    font-size: 1.6rem;
+  }
+
+  .os-detect-chip {
+    font-size: 0.78rem;
+    padding: 6px 14px;
+  }
+
+  .dl-hash-table-row {
+    grid-template-columns: 1fr auto;
+    gap: 8px;
+    padding: 8px 10px;
+  }
+
+  .dl-ht-file {
+    display: none;
+  }
+
+  .dl-ht-hash {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .dl-hero-title {
+    font-size: 1.75rem;
+  }
+
+  .dl-hero {
+    padding: 44px 0 32px;
+  }
+
+  .dl-hero-sub {
+    font-size: 0.9rem;
+  }
+
+  .dl-card {
+    padding: 22px 16px;
+    gap: 18px;
+  }
+
+  .dl-os-name {
+    font-size: 1.2rem;
+  }
+
+  .dl-version-info {
+    padding: 12px 14px;
+  }
+
+  .dl-version-row {
+    font-size: 0.8rem;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .dl-installer-name {
+    white-space: normal;
+    font-size: 0.8rem;
+  }
+
+  .dl-installer-sub {
+    font-size: 0.72rem;
+  }
+
+  .dl-hash-code {
+    font-size: 0.6rem;
+  }
+
+  .dl-req-title {
+    font-size: 1.4rem;
+  }
+
+  .dl-req-row {
+    padding: 14px;
+    gap: 12px;
+  }
 }

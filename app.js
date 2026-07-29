@@ -9,7 +9,11 @@ document.addEventListener('DOMContentLoaded', () => {
   initMockupTelemetry();
   initDownloadPage();
   initHashCopy();
-  init3DTiltEffect();
+  initMobileMenu();
+  // Only enable 3D tilt on non-touch devices
+  if (!('ontouchstart' in window)) {
+    init3DTiltEffect();
+  }
 });
 
 /**
@@ -17,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
  */
 function initThemeToggle() {
   const toggleBtn = document.getElementById('themeToggle');
-  if (!toggleBtn) return;
+  const mobileToggleBtn = document.getElementById('mobileThemeToggle');
 
   // Check for saved preference or system preference
   const savedTheme = localStorage.getItem('pyvision-theme');
@@ -27,7 +31,7 @@ function initThemeToggle() {
     document.documentElement.setAttribute('data-theme', 'dark');
   }
 
-  toggleBtn.addEventListener('click', () => {
+  function toggleTheme() {
     const currentTheme = document.documentElement.getAttribute('data-theme');
     const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
 
@@ -38,7 +42,10 @@ function initThemeToggle() {
     }
 
     localStorage.setItem('pyvision-theme', newTheme);
-  });
+  }
+
+  if (toggleBtn) toggleBtn.addEventListener('click', toggleTheme);
+  if (mobileToggleBtn) mobileToggleBtn.addEventListener('click', toggleTheme);
 
   // Listen for system theme changes
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
@@ -382,28 +389,80 @@ function initHashCopy() {
  */
 function init3DTiltEffect() {
   const tiltElements = document.querySelectorAll('.tech-card, .ui-feature-box');
-  
+
   tiltElements.forEach(el => {
     el.addEventListener('mousemove', (e) => {
       const rect = el.getBoundingClientRect();
       const x = e.clientX - rect.left; // x position within the element.
       const y = e.clientY - rect.top;  // y position within the element.
-      
+
       const centerX = rect.width / 2;
       const centerY = rect.height / 2;
-      
+
       const tiltX = ((y - centerY) / centerY) * -5; // max rotation degrees
       const tiltY = ((x - centerX) / centerX) * 5;
-      
+
       el.style.transform = `perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale3d(1.02, 1.02, 1.02)`;
       el.style.transition = 'transform 0.1s ease';
       el.style.zIndex = '10';
     });
-    
+
     el.addEventListener('mouseleave', () => {
       el.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
       el.style.transition = 'transform 0.5s var(--ease-out-smooth)';
       el.style.zIndex = '1';
     });
+  });
+}
+
+/**
+ * 7. MOBILE MENU (Slide-in Panel with Overlay)
+ */
+function initMobileMenu() {
+  const toggleBtn = document.getElementById('mobileMenuToggle');
+  const closeBtn = document.getElementById('mobileMenuClose');
+  const panel = document.getElementById('mobileMenuPanel');
+  const overlay = document.getElementById('mobileMenuOverlay');
+
+  if (!toggleBtn || !panel || !overlay) return;
+
+  function openMenu() {
+    panel.classList.add('active');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    toggleBtn.setAttribute('aria-expanded', 'true');
+  }
+
+  function closeMenu() {
+    panel.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.style.overflow = '';
+    toggleBtn.setAttribute('aria-expanded', 'false');
+  }
+
+  toggleBtn.addEventListener('click', openMenu);
+  if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+  overlay.addEventListener('click', closeMenu);
+
+  // Close menu when a navigation link is clicked
+  const navLinks = panel.querySelectorAll('.mobile-nav-link');
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      closeMenu();
+    });
+  });
+
+  // Close menu on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && panel.classList.contains('active')) {
+      closeMenu();
+    }
+  });
+
+  // Close menu if window resizes above mobile breakpoint
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768 && panel.classList.contains('active')) {
+      closeMenu();
+    }
   });
 }
